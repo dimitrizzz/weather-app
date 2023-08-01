@@ -8,7 +8,7 @@ function weatherCard(weatherData) {
   const { current, location } = weatherData;
   const { name, region, country } = location;
   return `
-<div class="card text-center" style="box-shadow: 5px 10px 18px #888888; width:300px;height:500px; font-family: ui-serif; border-radius:20px ;
+<div class="card text-center" style="box-shadow: 5px 10px 18px #888888; width:300px;height:400px; font-family: ui-serif; border-radius:20px ;
 ">
   <div class="card-header">
     <h4>${name}, ${region}, ${country}</h4>
@@ -21,19 +21,19 @@ function weatherCard(weatherData) {
       />
     </div>
     <div>
-      <h2>${current.temp_c}°C</h2>
+      <h2 style="margin:20px;">${current.temp_c}°C</h2>
     </div>
   </div>
   <div class="card-body">
-    <h5 class="card-title">${current.condition.text}</h5>
-    <p class="card-text" style="background-color: #007bff;">Humidity: ${current.humidity}%</p>
+    <h4 class="card-title" style="margin:20px;">${current.condition.text}</h4>
+    <p class="card-text" style="background-color: #007bff; border-radius:20px; ">Humidity: ${current.humidity}%</p>
   </div>
 </div>
 `;
 }
 
 function weatherCardHeader({ lat, lon, name, region }) {
-  return `<li ><a href="#" data-lat="${lat}" data-lon="${lon}">${name}, ${region}</a></li>`;
+  return `<li ><a style="font-size:15px;" href="#" data-lat="${lat}" data-lon="${lon}">${name}, ${region}</a></li>`;
 }
 
 function dark() {
@@ -58,7 +58,7 @@ $locationInput.addEventListener("input", async (e) => {
 
 $locations.addEventListener("click", async (e) => {
   e.preventDefault();
-
+  
   if (e.target.tagName === "A") {
     $locations.innerHTML = "";
     $locationInput.value = e.target.innerText;
@@ -119,10 +119,7 @@ const farToCelcius = (fDeg) => {
   return (((fDeg - 32) * 5) / 9).toFixed(1);
 };
 
-// function round(value, precision) {
-//   var multiplier = Math.pow(10, precision || 0);
-//   return Math.round(value * multiplier) / multiplier;
-// }
+
 
 // Background Day-Night
 document.getElementById("btn_day_night").addEventListener("click", function () {
