@@ -70,6 +70,7 @@ $locations.addEventListener("click", async (e) => {
     const weatherData = await res.json();
 
     $weatherWidget.innerHTML = weatherCard(weatherData);
+    $locationInput.value = "";
   }
 });
 
