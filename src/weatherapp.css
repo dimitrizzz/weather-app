@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300&display=swap');
+* {
+  box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    margin: 0px 0px 0px 0px;
+  }
+  h1 {
+   
+    width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 20px 0;
+      /* background-color: #4285F4;  */
+      color: #fff;
+      font-family: 'Karla', sans-serif;
+    
+  }
+  
+    .container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    }
+    input  {
+      background-image: url(../icons/search.svg);
+      background-repeat: no-repeat;
+      background-position:right;
+      background-size:20px;
+      /* width: 10px; */
+      
+      
+    }
+    .day_night{
+      width: 100%;
+      height: 40px;
+      margin-bottom: 20px;
+      position: relative;
+      }
+
+    #btn_day_night{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 40px;
+        width: 75px;
+        background-color: #15181f;
+        right: 0;
+        border-radius: 20px;
+        outline: none;
+        cursor: pointer;
+    }
+    #btn_day_night:after{
+        content: "";
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        background-color: #f3ef06;
+        top: 5px;
+        left: 7px;
+        border-radius: 50%;
+    }
+    .dark-theme {
+        background-image: url(../icons/storm.jpg);
+        color: #070000;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .dark-theme #btn_day_night{
+        background-color: #0e0000;
+    }
+    .dark-theme #btn_day_night:after{
+        background-color: transparent;
+        box-shadow: 10px 10px #ffffff;
+        top: -4px;
+        left: 30px;
+    }
+    
+  #location-query {
+    margin: 7rem 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    width: 100%;   
+    box-shadow: #007bff;
+    font-size: 20px;
+    }
+
+  #locations {
+    position: relative;
+    z-index: 100;
+  }
+
+  #locations ul,
+  #locations li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  #locations ul {
+    position: absolute;
+    top: -5px;
+    width: 100%;
+    background: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid #007bff;
+  }
+
+  #locations li a {
+    display: block;
+    padding: 0.2rem 0.4rem;
+    text-decoration: none;
+    color: #212529;
+  }
+
+  #locations li a:hover {
+    background: #007bff;
+    color: #fff;
+  }
+
+  #weather-widget {
+    position: relative;
+    z-index: 1;
+    margin: 2rem auto;
+    width: 18rem;
+    border-radius: 10px;
+  }
+
+  .card-header h4 {
+    margin: 0;
+  }
+
+  .weather-condition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 0 0;
+  }
+
+  .weather-condition .icon {
+    margin: 0 1rem 0 0;
+  }
+
+  .weather-condition h2 {
+    margin: 0;
+  }
+  .button img {
+    border: 0;
+    outline: 0;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+  }
+  .dark-mode {
+    background-image: url(storm.jpg);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  p {
+    color: #fff;
+  }
+  button {
+    background-color: black;
+    color: #fff;
+  }
+  .cel-toggle-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+  }
+
+  .toggle-button {
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    padding: 4px 8px;
+    border: 1px solid rgb(83, 83, 83);
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+  .unit-enabled {
+    background-color: rgb(93, 143, 2);
+    cursor: default;
+  }
+
+  .right-border-none {
+    border-right: none;
+  }
+
+  .left-border {
+    border-left: 1px solid dimgray;
+   border-radius:20px ;
+  }
+  
+  .header-component{
+    color: #ffffff;
+    font-size: 20px;
+    background-color: rgba(79, 131, 226, 0.25);
+    border-radius: 5px;
+   
+  }
